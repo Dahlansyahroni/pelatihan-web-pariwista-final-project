@@ -87,8 +87,8 @@
 			</div><!--- END ROW -->
 			<div class="row text-center">
 				<div class="col-lg-12 col-sm-12 col-xs-12 wow zoomIn">
-					<p class="footer_copyright">Hilux &copy; 2026 All Rights Reserved. Distributed by <a
-							href="https://themewagon.com" target="_blank">ThemeWagon</a></p>.
+					<p class="footer_copyright">Hilux &copy; 2026 All Rights Reserved.<br>Distributed by <a
+							href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
 				</div><!--- END COL -->
 			</div><!--- END ROW -->
 		</div><!--- END CONTAINER -->
