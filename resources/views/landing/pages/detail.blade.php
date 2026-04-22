@@ -2,188 +2,268 @@
 
 @section('content')
 <!-- START SECTION TOP -->
-	<section class="section-top">
-		<div class="container">
-			<div class="col-lg-10 offset-lg-1 col-xs-12 text-center">
-				<div class="section-top-title wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s"
-					data-wow-offset="0">
-					<h1>Single Property</h1>
-				</div><!-- //.HERO-TEXT -->
-			</div><!--- END COL -->
-		</div><!--- END CONTAINER -->
-	</section>
-	<!-- END SECTION TOP -->
+<section class="section-top">
+    <div class="container">
+        <div class="col-lg-10 offset-lg-1 col-xs-12 text-center">
+            <div class="section-top-title wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                <h1>{{ $zone->name }}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION TOP -->
 
-	<!-- START SINGLE PROPERTY DETAILS -->
-	<section class="property_single_details section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-9 col-sm-9 col-xs-12">
-					<div class="property_single_details_slide">
-						<img src="{{ asset('storage/landing/assets/img/2.jpg') }}" class="img-fluid" alt="About-Slide">
-					</div>
-					<div class="property_single_details_price">
-						<h1>2045 B Street</h1>
-						<h4>$235,254</h4>
-						<p>2369 Robinson Lane Jackson, OH 45640</p>
-						<ul>
-							<li><i class="fa fa-check"></i> 4 bed rooms</li>
-							<li><i class="fa fa-check"></i> 1 garage</li>
-							<li><i class="fa fa-check"></i> 960 sq ft</li>
-						</ul>
-					</div>
-					<div class="property_single_details_description">
-						<h4>Property description</h4>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-							been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-							galley of type and scrambled it to make a type specimen book. It has survived not only five
-							centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-							It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-							passages, and more recently with desktop publishing software like Aldus PageMaker including
-							versions of Lorem Ipsum.</p>
-					</div>
-					<div class="property_info">
-						<div class="row">
-							<div class="col-md-12 col-sm-12 col-xs-12">
-								<div class="single_property_list">
-									<h4>Amenities</h4>
-									<ul class="single_property_list_mr">
-										<li><i class="fa fa-check"></i> Video</li>
-										<li><i class="fa fa-check"></i> Hairdryer</li>
-										<li><i class="fa fa-check"></i> Cot</li>
-										<li><i class="fa fa-check"></i> Dishwasher</li>
-										<li><i class="fa fa-check"></i> Parquet</li>
-										<li><i class="fa fa-check"></i> Iron</li>
-									</ul>
-									<ul class="single_property_list_mr">
-										<li><i class="fa fa-check"></i> Air conditioning</li>
-										<li><i class="fa fa-check"></i> Cable TV</li>
-										<li><i class="fa fa-check"></i> Grill</li>
-										<li><i class="fa fa-check"></i> Juicer</li>
-										<li><i class="fa fa-check"></i> Use of pool</li>
-										<li><i class="fa fa-check"></i> Toaster</li>
-									</ul>
-									<ul>
-										<li><i class="fa fa-check"></i> Video</li>
-										<li><i class="fa fa-check"></i> Hairdryer</li>
-										<li><i class="fa fa-check"></i> Cot</li>
-										<li><i class="fa fa-check"></i> Dishwasher</li>
-										<li><i class="fa fa-check"></i> Parquet</li>
-										<li><i class="fa fa-check"></i> Iron</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="property_map">
-						<h4>on map</h4>
-						<div class="map-pro">
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.957183635167!2d-74.00402768559431!3d40.71895904512855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a1316e7a7%3A0x47bb20eb6074b3f0!2sNew%20Work%20City%20-%20(CLOSED)!5e0!3m2!1sbn!2sbd!4v1600305497356!5m2!1sbn!2sbd"
-								style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</div>
-					</div>
-					<div class="single_similar_property">
-						<div class="row">
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="single_property">
-									<img src="{{ asset('storage/landing/assets/img/property/1.jpg') }}" class="img-fluid" alt="" />
-									<div class="single_property_description text-center">
-										<span><i class="fa fa-object-group"></i> 900 sq ft</span>
-										<span><i class="fa fa-bed"></i> 4 Badrooms</span>
-										<span><i class="fa fa-star-o"></i> 2 Baths</span>
-									</div>
-									<div class="single_property_content">
-										<h4><a href="#">2045 B Street</a></h4>
-										<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical.
-										</p>
+<section class="property_single_details section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- MAIN CONTENT -->
+            <div class="col-md-9 col-sm-12">
 
-									</div>
-									<div class="single_property_price">
-										High Meadow Lane Mount Pleasant <span>$ 170,000</span>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-								</div><!--- END SINGLE PROPERTY -->
-							</div><!--- END COL -->
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="single_property">
-									<img src="{{ asset('storage/landing/assets/img/property/2.jpg') }}" class="img-fluid" alt="" />
-									<div class="single_property_description text-center">
-										<span><i class="fa fa-object-group"></i> 900 sq ft</span>
-										<span><i class="fa fa-bed"></i> 4 Badrooms</span>
-										<span><i class="fa fa-star-o"></i> 2 Baths</span>
-									</div>
-									<div class="single_property_content">
-										<h4><a href="#">Lynn Ogden Lane</a></h4>
-										<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical.
-										</p>
+                <div class="property_single_details_slide mb-4">
+                    <img src="{{ Storage::url($zone->image) }}"
+                         class="img-fluid rounded shadow-sm w-100"
+                         alt="{{ $zone->name }}">
+                </div>
 
-									</div>
-									<div class="single_property_price">
-										High Meadow Lane Mount Pleasant <span>$ 170,000</span>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-								</div><!--- END SINGLE PROPERTY -->
-							</div><!--- END COL -->
-						</div>
-					</div>
-				</div><!--- END COL -->
-				<div class="col-md-3 col-sm-3 col-xs-12">
-					<div class="single_property_form">
-						<h4>Enquire here</h4>
-						<form class="form" name="enq" method="post" action="contact.php"
-							onsubmit="return validation();">
-							<div class="row">
-								<div class="form-group col-md-12">
-									<input type="text" name="name" class="form-control" id="first-name"
-										placeholder="Name" required="required">
-								</div>
-								<div class="form-group col-md-12">
-									<input type="email" name="email" class="form-control" id="email" placeholder="Email"
-										required="required">
-								</div>
-								<div class="form-group col-md-12">
-									<input type="text" name="phone" class="form-control" id="phone" placeholder="Phone"
-										required="required">
-								</div>
-								<div class="form-group col-md-12 mbnone">
-									<textarea rows="6" name="message" class="form-control" id="description"
-										placeholder="Your Message" required="required"></textarea>
-								</div>
-								<div class="col-md-12">
-									<div class="actions">
-										<input type="submit" value="Send message" name="submit" id="submitButton"
-											class="btn btn-lg btn-contact-bg" title="Submit Your Message!" />
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="single_property_form_agent">
-						<div class="single_property_form_agent_profile">
-							<img src="{{ asset('storage/landing/assets/img/team/team-6.png') }}" class="img-fluid" alt="" />
-							<h4><i class="fa fa-phone"></i> +88 123 123 123</h4>
-							<h4><a href="#">info@example.com</a></h4>
-						</div>
-						<div class="single_property_form_agent_profile">
-							<img src="{{ asset('storage/landing/assets/img/team/team-2.jpg') }}" class="img-fluid" alt="" />
-							<h4><i class="fa fa-phone"></i> +88 123 123 123</h4>
-							<h4><a href="#">info@example.com</a></h4>
-						</div>
-					</div>
-				</div><!--- END COL -->
-			</div>
-		</div>
-	</section>
+                <div class="property_single_details_price mb-5">
+                    <h1>{{ $zone->name }}</h1>
+                    <h4 class="text-primary mb-3">Rp. {{ number_format($zone->price_range, 0, ',', '.') }}</h4>
+                    <p>{{ $zone->description }}</p>
+                </div>
 
+                <!-- ATTRACTIONS -->
+                <div class="property_single_details_description">
+                    <h4 class="mb-4">Attractions in this Zone</h4>
 
+                    <div class="row">
+                        @forelse($zone->attractions as $attraction)
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100 shadow-sm border-0 rounded">
+                                    <img src="{{ Storage::url($attraction->image) }}"
+                                         class="card-img-top"
+                                         alt="{{ $attraction->name }}"
+                                         style="height:220px; object-fit:cover;">
 
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $attraction->name }}</h5>
+
+                                        <p class="text-muted small mb-2">
+                                            {{ $attraction->price ? 'Price: Rp. '.number_format($attraction->price, 0, ',', '.') : 'Free' }}
+                                        </p>
+
+                                        <p class="card-text">
+                                            {{ \Illuminate\Support\Str::limit($attraction->description, 120) }}
+                                        </p>
+                                    </div>
+
+                                    <div class="card-footer bg-white border-0">
+                                        <button type="button"
+                                                class="btn btn-primary btn-sm"
+                                                data-toggle="modal"
+                                                data-target="#reviewModal{{ $attraction->id }}">
+                                            Give Review
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- REVIEW MODAL -->
+                                <div class="modal fade"
+                                     id="reviewModal{{ $attraction->id }}"
+                                     tabindex="-1"
+                                     role="dialog"
+                                     aria-labelledby="reviewModalLabel{{ $attraction->id }}"
+                                     aria-hidden="true">
+
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="reviewModalLabel{{ $attraction->id }}">
+                                                    Leave a Review for {{ $attraction->name }}
+                                                </h5>
+
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                    <span>&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <form action="{{ route('reviews.store') }}" method="POST">
+                                                @csrf
+
+                                                <input type="hidden" name="attraction_id" value="{{ $attraction->id }}">
+
+                                                @auth
+                                                    <input type="hidden" name="user_id" value="{{ auth()->id() }}">
+                                                @endauth
+
+                                                <div class="modal-body">
+
+                                                    @guest
+                                                        <div class="form-group mb-3">
+                                                            <label>Your Name</label>
+                                                            <input type="text"
+                                                                   name="visitor_name"
+                                                                   class="form-control"
+                                                                   required>
+                                                        </div>
+
+                                                        <div class="form-group mb-3">
+                                                            <label>Your Email</label>
+                                                            <input type="email"
+                                                                   name="visitor_email"
+                                                                   class="form-control"
+                                                                   required>
+                                                        </div>
+                                                    @endguest
+
+                                                    <div class="form-group mb-3">
+                                                        <label>Rating</label>
+                                                        <select name="rating" class="form-control" required>
+                                                            <option value="">Select Rating</option>
+                                                            <option value="5">★★★★★ - 5 Stars</option>
+                                                            <option value="4">★★★★☆ - 4 Stars</option>
+                                                            <option value="3">★★★☆☆ - 3 Stars</option>
+                                                            <option value="2">★★☆☆☆ - 2 Stars</option>
+                                                            <option value="1">★☆☆☆☆ - 1 Star</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label>Comment</label>
+                                                        <textarea name="comment"
+                                                                  class="form-control"
+                                                                  rows="4"
+                                                                  placeholder="Share your experience..."
+                                                                  required></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button"
+                                                            class="btn btn-secondary"
+                                                            data-dismiss="modal">
+                                                        Close
+                                                    </button>
+
+                                                    <button type="submit"
+                                                            class="btn btn-primary">
+                                                        Submit Review
+                                                    </button>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
+                            <div class="col-12">
+                                <div class="alert alert-light border text-center">
+                                    No attractions available in this zone.
+                                </div>
+                            </div>
+                        @endforelse
+                    </div>
+                </div>
+
+                <!-- REVIEWS -->
+                <div class="property_info mt-5">
+                    <div class="single_property_list">
+                        <h4 class="mb-4">Recent Reviews</h4>
+
+                        @php
+                            $reviews = collect();
+                            foreach ($zone->attractions as $attraction) {
+                                $reviews = $reviews->merge($attraction->reviews->where('is_approved', true));
+                            }
+                            $reviews = $reviews->sortByDesc('created_at');
+                        @endphp
+
+                        @forelse($reviews as $review)
+                            <div class="media mb-4 p-3 shadow-sm rounded bg-light">
+                                <div class="media-body">
+
+                                    <h6 class="font-weight-bold mb-1">
+                                        {{ optional($review->user)->name ?? $review->visitor_name ?? 'Anonymous Visitor' }}
+
+                                        <span class="text-warning ml-2">
+                                            @for($i = 1; $i <= 5; $i++)
+                                                @if($i <= $review->rating)
+                                                    <i class="fa fa-star"></i>
+                                                @else
+                                                    <i class="fa fa-star-o"></i>
+                                                @endif
+                                            @endfor
+                                        </span>
+                                    </h6>
+
+                                    <p class="small text-muted mb-2">
+                                        Reviewed on {{ optional($review->attraction)->name ?? 'Unknown Attraction' }}
+                                    </p>
+
+                                    <p class="mb-2">{{ $review->comment }}</p>
+
+                                    <small class="text-muted">
+                                        {{ $review->created_at ? $review->created_at->diffForHumans() : '' }}
+                                    </small>
+                                </div>
+                            </div>
+                        @empty
+                            <div class="alert alert-light border">
+                                No reviews yet for this zone.
+                            </div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-md-3 col-sm-12">
+                <div class="single_property_form shadow-sm p-3 rounded bg-white">
+                    <h4 class="mb-3">Enquire Here</h4>
+
+                    <form class="form" method="POST" action="#">
+                        @csrf
+
+                        <div class="form-group mb-3">
+                            <input type="text"
+                                   name="name"
+                                   class="form-control"
+                                   placeholder="Name"
+                                   required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <input type="email"
+                                   name="email"
+                                   class="form-control"
+                                   placeholder="Email"
+                                   required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <input type="text"
+                                   name="phone"
+                                   class="form-control"
+                                   placeholder="Phone"
+                                   required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <textarea rows="5"
+                                      name="message"
+                                      class="form-control"
+                                      placeholder="Your Message"
+                                      required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

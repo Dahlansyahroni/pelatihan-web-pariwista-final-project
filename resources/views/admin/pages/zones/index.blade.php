@@ -6,12 +6,14 @@
         <a href="{{ route('admin.zones.create') }}" class="btn btn-primary">Create Zone</a>
     </div>
 
-    @if (session('success'))
-        <div class="alert alert-success mt-3">
-            {{ session('success') }}
-        </div>
-    @endif
-
+    @if(session('success'))
+                    <div id="successAlert" class="alert alert-success border-0 rounded-4 shadow-sm d-flex align-items-center justify-content-between px-4 py-3 mb-4">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill fs-5"></i>
+                            <span class="fw-medium">{{ session('success') }}</span>
+                        </div>
+                    </div>
+                @endif
     <hr>
     <table class="table table-striped mt-3">
         <thead>

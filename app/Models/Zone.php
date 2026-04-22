@@ -13,4 +13,9 @@ class Zone extends Model
         "price_range",
         "image"
     ];
+
+    public function attractions()
+    {
+        return $this->hasMany(Attraction::class);
+    }
 }

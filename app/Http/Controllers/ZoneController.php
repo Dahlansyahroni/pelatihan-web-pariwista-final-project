@@ -39,6 +39,7 @@ class ZoneController extends Controller
 
     public function show(Zone $zone)
     {
+        $zone->load('attractions');
         return view('admin.pages.zones.show', compact('zone'));
     }
 

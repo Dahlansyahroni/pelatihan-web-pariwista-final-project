@@ -28,6 +28,35 @@
 
 
              <li class="nav-item">
+                 <div class="nav-heading">Master Data</div>
+                 <hr class="mx-5 nav-line mb-1" />
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="{{ route('admin.zones.index') }}">
+                     <span class="nav-icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+                     </span>
+                     <span class="text">Zones</span>
+                 </a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="{{ route('admin.attractions.index') }}">
+                     <span class="nav-icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-building-castle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 19v-2a3 3 0 0 0 -6 0v2" /><path d="M3 11v8h2v-5l2 2v3h7v-3l2 -2v5h2v-8" /><path d="M8 11v-4a2 2 0 1 1 4 0v4" /><path d="M18 11v-5a4 4 0 1 0 -8 0v5" /><path d="M22 11h-20" /></svg>
+                     </span>
+                     <span class="text">Attractions</span>
+                 </a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="{{ route('admin.reviews.index') }}">
+                     <span class="nav-icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
+                     </span>
+                     <span class="text">Reviews</span>
+                 </a>
+             </li>
+
+             <li class="nav-item">
                  <div class="nav-heading">Pages</div>
                  <hr class="mx-5 nav-line mb-1" />
              </li>

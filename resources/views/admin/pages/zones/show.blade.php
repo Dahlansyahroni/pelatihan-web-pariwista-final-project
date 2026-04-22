@@ -21,4 +21,41 @@
             <a href="{{ route('admin.zones.index') }}" class="btn btn-secondary">Back to List</a>
         </div>
     </div>
+
+    <div class="mt-4">
+        <h3>Attractions in this Zone</h3>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($zone->attractions as $attraction)
+                    <tr>
+                        <td>{{ $attraction->name }}</td>
+                        <td>{{ $attraction->price ?? '-' }}</td>
+                        <td>
+                            @if ($attraction->image)
+                                <img src="{{ asset('storage/' . $attraction->image) }}" alt="{{ $attraction->name }}" width="80">
+                            @else
+                                <span class="text-muted">No Image</span>
+                            @endif
+                        </td>
+                        <td>
+                            <a href="{{ route('admin.attractions.show', $attraction) }}" class="btn btn-sm btn-info">View</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="4" class="text-center">No attractions found in this zone.</td>
+                    </tr>
+                @endforelse
+            </tbody>
+        </table>
+    </div>
 @endsection
