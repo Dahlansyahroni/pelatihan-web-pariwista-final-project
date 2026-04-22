@@ -140,21 +140,20 @@
 				<div></div>
 			</div>
 			<div class="row">
-				<div class="col-lg-4 col-sm-12 col-xs-12">
+				@forelse($zones as $zone)
+					<div class="col-lg-4 col-sm-12 col-xs-12">
 					<div class="single_property">
-						<img src="{{ asset('storage/landing/assets/img/property/1.jpg') }}" class="img-fluid" alt="" />
+						<img src="{{Storage::url($zone->image)}}" class="img-fluid" alt="" />
 						<div class="single_property_description text-center">
-							<span><i class="fa fa-object-group"></i> 900 sq ft</span>
-							<span><i class="fa fa-bed"></i> 4 Badrooms</span>
-							<span><i class="fa fa-star-o"></i> 2 Baths</span>
+							<span><i class="fa fa-object-group"></i> Attraction</span>
 						</div>
 						<div class="single_property_content">
-							<h4><a href="#">Lodgeville Road</a></h4>
-							<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical. </p>
+							<h4><a href="#">{{$zone->name}}</a></h4>
+							<p>{{$zone->description}}</p>
 
 						</div>
 						<div class="single_property_price">
-							High Meadow Lane Mount Pleasant <span>$ 170,000</span>
+							Per PAX <span>Rp. {{$zone->price_range}}</span>
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -163,6 +162,10 @@
 						</div>
 					</div><!--- END SINGLE PROPERTY -->
 				</div><!--- END COL -->
+				@empty
+					
+				@endforelse
+				
 				<div class="col-lg-4 col-sm-12 col-xs-12">
 					<div class="single_property">
 						<img src="{{ asset('storage/landing/assets/img/jepang.jpg') }}" class="img-fluid" alt="" />
