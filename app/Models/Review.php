@@ -8,6 +8,7 @@ class Review extends Model
 {
    protected $fillable = [
     'attraction_id',
+    'zone_id',
     'user_id',
     'visitor_name',
     'visitor_email',
@@ -19,6 +20,11 @@ class Review extends Model
     public function attraction()
     {
         return $this->belongsTo(Attraction::class);
+    }
+
+    public function zone()
+    {
+        return $this->belongsTo(Zone::class);
     }
 
     public function user()

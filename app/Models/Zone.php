@@ -18,4 +18,9 @@ class Zone extends Model
     {
         return $this->hasMany(Attraction::class);
     }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

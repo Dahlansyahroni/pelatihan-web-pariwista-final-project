@@ -13,12 +13,28 @@ Route::get('/', function () {
     $attractions = Attraction::all();
     return view('landing.pages.index', compact('zones', 'attractions'));
 });
+
+
 Route::get('detail/{zone}', function (Zone $zone) {
-    $zone->load(['attractions.reviews.user']);
-    return view('landing.pages.detail', compact('zone'));
+    $zone->load([
+        'attractions.reviews.user',
+        'reviews' => function ($query) {
+            $query->where('is_approved', true)->with('user');
+        }
+    ]);
+    return view('landing.pages.detail-zone', compact('zone'));
 })->name('zone.detail');
-Route::prefix('admin')->name('admin.')->group( function() {
-    Route::get('/', function() {
+
+Route::get('attraction/{attraction}', function (Attraction $attraction) {
+    $attraction->load(['reviews' => function ($query) {
+        $query->where('is_approved', true)->with('user');
+    }]);
+    return view('landing.pages.detail-attraction', compact('attraction'));
+})->name('attraction.detail');
+
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', function () {
         $zones_count = \App\Models\Zone::count();
         $attractions_count = \App\Models\Attraction::count();
         $reviews_count = \App\Models\Review::count();
@@ -27,8 +43,8 @@ Route::prefix('admin')->name('admin.')->group( function() {
 
     Route::resource('zones', ZoneController::class);
     Route::resource('attractions', AttractionController::class);
+    Route::patch('reviews/{review}/approve', [ReviewController::class, 'approve'])->name('reviews.approve');
     Route::resource('reviews', ReviewController::class)->only(['index', 'destroy']);
-
 });
 
 Route::post('reviews', [ReviewController::class, 'store'])->name('reviews.store');
@@ -45,4 +61,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

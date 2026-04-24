@@ -4,3 +4,7 @@
 
 <!-- Theme JS -->
 <script src="{{ asset('storage/admin/assets/js/theme.min.js') }}"></script>
+<script src="{{ asset('storage/admin/assets/js/vendors/sidebarnav.js') }}"></script>
+
+
+

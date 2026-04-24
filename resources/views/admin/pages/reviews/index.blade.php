@@ -17,7 +17,7 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Attraction</th>
+            <th>Target</th>
             <th>Reviewer</th>
             <th>Rating</th>
             <th>Comment</th>
@@ -32,7 +32,13 @@
                 <td>{{ $review->id }}</td>
 
                 <td>
-                    {{ optional($review->attraction)->name ?? '-' }}
+                    @if($review->attraction)
+                        <span class="badge bg-primary">Attraction:</span> {{ $review->attraction->name }}
+                    @elseif($review->zone)
+                        <span class="badge bg-info">Zone:</span> {{ $review->zone->name }}
+                    @else
+                        -
+                    @endif
                 </td>
 
                 <td>
@@ -50,8 +56,8 @@
                 </td>
 
                 <td>
-                    <span class="badge bg-warning text-dark">
-                        {{ $review->rating }} / 5
+                    <span >
+                        ⭐ {{ $review->rating  }} / 5
                     </span>
                 </td>
 

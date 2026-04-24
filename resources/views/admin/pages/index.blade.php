@@ -19,7 +19,7 @@
                 </div>
                 <div>
                     <h1 class="fw-bold">{{ $zones_count }}</h1>
-                    <a href="{{ route('admin.zones.index') }}" class="btn btn-sm btn-link p-0">View all zones</a>
+                    <a href="{{ route('admin.zones.index') }}" class="text-center" class="btn btn-sm btn-outline-primary d-flex align-items-center gap-1">Go to zones</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <h1 class="fw-bold">{{ $attractions_count }}</h1>
-                    <a href="{{ route('admin.attractions.index') }}" class="btn btn-sm btn-link p-0">View all attractions</a>
+                    <a href="{{ route('admin.attractions.index') }}" class="text-center" class="btn btn-sm btn-outline-primary d-flex align-items-center gap-1">attractions</a>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div>
                     <h1 class="fw-bold">{{ $reviews_count }}</h1>
-                    <a href="{{ route('admin.reviews.index') }}" class="btn btn-sm btn-link p-0">Manage reviews</a>
+                    <a href="{{ route('admin.reviews.index') }}"  class="text-center" class="btn btn-sm btn-outline-primary d-flex align-items-center gap-1">Manage reviews</a>
                 </div>
             </div>
         </div>

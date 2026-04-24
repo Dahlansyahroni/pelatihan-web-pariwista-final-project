@@ -82,7 +82,7 @@
                                 <span><i class="fa fa-bolt"></i> {{ $attraction->zone->name }}</span>
                             </div>
                             <div class="single_property_content">
-                                <h4><a href="{{ route('zone.detail', $attraction->zone) }}">{{ $attraction->name }}</a></h4>
+                                <h4><a href="{{ route('attraction.detail', $attraction) }}">{{ $attraction->name }}</a></h4>
                                 <p>{{ Str::limit($attraction->description, 100) }}</p>
                             </div>
                             <div class="single_property_price">
